@@ -15,34 +15,26 @@ export function App() {
     ]
     return (
       <>
-      <div className='follow'>
-        <FollowCard {...landogomez}>
-          landogomez {/*Children*/}  {/*Children, esta envuelto entre etiquetas Prop especial (children)*/}
-        </FollowCard>
-
-        {
-          users.map(({userName, initialFollowing, name, formatUserName}) => (
-            <FollowCard
-            userName={userName}
-            initialFollowing={initialFollowing}
-            formatUserName={format}
-            >
-              {name}
-            </FollowCard>
-          )
-
-          )
-        }
-        
-        <FollowCard //Pasar props directamente
-            formatUserName={format} 
-            userName="vastidefreitas" 
-             >
-              V
+        <div className='follow'>
+          <FollowCard {...landogomez}>
+            landogomez {/*Children*/}  {/*Children, esta envuelto entre etiquetas Prop especial (children)*/}
           </FollowCard>
-        <FollowCard formatUserName={format}  userName="Ravens" initialFollowing={true}
-        />
-      </div>
+
+          {
+            users.map(({userName, initialFollowing, name, formatUserName}) => (
+              <FollowCard
+              key={userName} /*Key es un prop especial que se usa para identificar elementos de una lista*/
+              userName={userName}
+              initialFollowing={initialFollowing}
+              formatUserName={format}
+              >
+                {name}
+              </FollowCard>
+            )
+
+            )
+          }
+        </div>
       </>
     )
 }
