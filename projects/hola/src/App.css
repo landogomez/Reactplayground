@@ -28,6 +28,7 @@ article header span {
 }
 
 article button {
+    cursor: pointer;
     margin-left: 16px;
     border: 0;
     border-radius: 999px;
@@ -39,4 +40,9 @@ article button {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+article button:hover {
+    background-color: #09f;
+    transition: .3s ease background-color;
 }

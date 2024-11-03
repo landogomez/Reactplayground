@@ -1,4 +1,4 @@
-export function FollowCard({ children ,formatUserName ,userName,  isFollowing }) {
+export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Valor por defecto*/ ,  isFollowing }) {
     return (
         <article className='tw-follow-card'>
         <header className='tw-follow-card-header'>

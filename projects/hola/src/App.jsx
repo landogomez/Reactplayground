@@ -5,14 +5,18 @@ import { FollowCard } from './FollowCard';
 export function App() {
 
     const format = (userName) => `@${userName}`
+
+    const landogomez = {isFollowing: false, userName: 'landogomez', formatUserName: format} //Pasar objeto como props
+    // Aunque muchas veces es mejor ser declarativo y pasar las props directamente
+
     return (
       <>
       <div className='follow'>
-        <FollowCard formatUserName={format} userName="ringoroadagian" isFollowing={false}>
-          landogomez
+        <FollowCard {...landogomez}>
+          landogomez {/*Children*/}
         </FollowCard>
         
-        <FollowCard 
+        <FollowCard //Pasar props directamente
             formatUserName={format} 
             userName="vastidefreitas" 
             isFollowing >
