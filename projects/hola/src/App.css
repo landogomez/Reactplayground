@@ -38,6 +38,10 @@ article header span {
     transition: .3s ease background-color;
 }
 
+.tw-follow-card-text {
+    display: block;
+}
+
 .follow {
     display: flex;
     flex-direction: column;
@@ -45,17 +49,30 @@ article header span {
 }
 
 .tw-follow-card-btn:hover {
-    background-color: #09f;
-    transition: .3s ease background-color;
+    opacity: .8;
 }
 
 .tw-follow-card-btn.following {
-    border: 1px #fff;
-    background: #000;
+    border: 1px solid #bbb;
+    background: transparent;
     color: #fff;
+    width: 140px;
 }
 
 .tw-follow-card-btn.following:hover {
-    background-color: rgb(96, 0, 0);
+    background-color: rgb(46, 1, 1);
+    border: 1px solid red;
     color: red;
+    transition: .3s ease all;
+    opacity: 1;
+}
+.tw-follow-card-btn.following:hover .tw-follow-card-text {
+    display: none;
+}
+
+.tw-follow-card-btn.following:hover .tw-follow-card-stopFollow {
+    display: block;
+}
+.tw-follow-card-stopFollow {
+    display: none;
 }

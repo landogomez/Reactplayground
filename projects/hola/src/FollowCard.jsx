@@ -1,8 +1,8 @@
 import { useState } from "react"
 // useState es un Hook que permite añadir estado a los componentes funcionales
 
-export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Valor por defecto*/ }){
-    const [isFollowing, setIsFollowing] = useState(false) //Estado inicial
+export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Valor por defecto*/, initialFollowing = false}) {
+    const [isFollowing, setIsFollowing] = useState(initialFollowing) //Estado inicial
     /* La linea de arriba es igual a esto (se le conoce como destructuring) = 
     const state = useState(false)
     const isFollowing = state[0]
@@ -28,7 +28,8 @@ export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Val
 
         <aside>
             <button className={buttonClass} onClick={handleClick}> 
-                {text}  
+            <span className="tw-follow-card-text">{text} </span>
+                <span className="tw-follow-card-stopFollow">Dejar de seguir</span>
             </button>
         </aside>
     </article>

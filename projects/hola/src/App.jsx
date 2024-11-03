@@ -6,7 +6,7 @@ export function App() {
 
     const format = (userName) => `@${userName}`
 
-    const landogomez = { userName: 'landogomez', formatUserName: format} //Pasar objeto como props
+    const landogomez = { initialFollowing: true ,userName: 'landogomez', formatUserName: format} //Pasar objeto como props
     // Aunque muchas veces es mejor ser declarativo y pasar las props directamente
 
     return (
@@ -22,7 +22,7 @@ export function App() {
              >
               V
           </FollowCard>
-        <FollowCard formatUserName={format}  userName="Ravens" 
+        <FollowCard formatUserName={format}  userName="Ravens" initialFollowing={true}
         />
       </div>
       </>
