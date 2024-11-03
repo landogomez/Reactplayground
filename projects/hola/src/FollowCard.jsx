@@ -1,4 +1,4 @@
-export function FollowCard({ userName, name, isFollowing }) {
+export function FollowCard({ formatUserName ,userName, name, isFollowing }) {
     return (
         <article className='tw-follow-card'>
         <header className='tw-follow-card-header'>
@@ -6,7 +6,7 @@ export function FollowCard({ userName, name, isFollowing }) {
             className='tw-follow-card-img'/>
             <div className='tw-follow-card-info'>
                 <strong>{name}</strong>
-                <span>@{userName}</span>
+                <span>{formatUserName(userName)}</span>
             </div>
         </header>
 
