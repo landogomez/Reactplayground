@@ -8,23 +8,17 @@ export function App() {
     return (
       <>
       <div className='follow'>
-        <FollowCard 
-            formatUserName={format} 
-            userName="ringoroadagian" 
-            name="landogomez" 
-            isFollowing={false}
-        />
+        <FollowCard formatUserName={format} userName="ringoroadagian" isFollowing={false}>
+          landogomez
+        </FollowCard>
+        
         <FollowCard 
             formatUserName={format} 
             userName="vastidefreitas" 
-            name="V" 
-            isFollowing 
-        />
-        <FollowCard 
-            formatUserName={format}  
-            userName="Ravens" 
-            name="Baltimore Ravens"
-            isFollowing={false}
+            isFollowing >
+              V
+          </FollowCard>
+        <FollowCard formatUserName={format}  userName="Ravens" isFollowing={false}
         />
       </div>
       </>
