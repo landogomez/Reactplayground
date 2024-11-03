@@ -13,7 +13,7 @@ export function App() {
       <>
       <div className='follow'>
         <FollowCard {...landogomez}>
-          landogomez {/*Children*/}
+          landogomez {/*Children*/}  {/*Children, esta envuelto entre etiquetas Prop especial (children)*/}
         </FollowCard>
         
         <FollowCard //Pasar props directamente

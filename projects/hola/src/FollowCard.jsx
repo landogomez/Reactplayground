@@ -1,4 +1,8 @@
-export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Valor por defecto*/ ,  isFollowing }) {
+export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Valor por defecto*/ ,  isFollowing }){
+
+    const text = isFollowing ? 'Siguiendo' : 'Seguir'
+    const buttonClass = isFollowing ? 'tw-follow-card-btn following' : 'tw-follow-card-btn'
+
     return (
         <article className='tw-follow-card'>
         <header className='tw-follow-card-header'>
@@ -11,8 +15,8 @@ export function FollowCard({ children ,formatUserName ,userName = 'unknown'/*Val
         </header>
 
         <aside>
-            <button> 
-                Seguir  {/*Children, esta envuelto entre aside y a su vez en button Prop especial (children)*/} 
+            <button className={buttonClass}> 
+                {text}  
             </button>
         </aside>
     </article>
