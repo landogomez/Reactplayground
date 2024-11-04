@@ -26,8 +26,14 @@ function App() {
 
   
   const [turn, setTurn] = useState(TURNS.X) // Se crea un estado para el turno
+  const [winner, setWinner] = useState(null) // Se crea un estado para el ganador
 
   const updateBoard = (index) => {
+    // no actualiza esta posición si ya tiene algo
+    
+    if (board[index]) return
+    
+    
     const newBoard = [...board] // Se crea una copia del array
     newBoard[index] = turn // Se actualiza el valor del array en la posicion index
     setBoard(newBoard) // Se actualiza el estado del array
